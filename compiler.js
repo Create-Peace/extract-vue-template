@@ -1,13 +1,13 @@
 const compiler = require('vue-template-compiler')
 
-const template = `
-<div id="test">
-<div>
-  <p>This is my vue render test</p>
-</div>
-<p>my name is {{myName}}</p>
-</div>`
+const fs = require('fs')
 
-const result = compiler.compile(template)
+const vFileContent = fs.readFileSync('./test.vue').toString()
+console.log(vFileContent)
+const parseRes = compiler.parseComponent(vFileContent)
 
-console.log('result', result)
+console.log(parseRes)
+
+const compilerResult = compiler.compile(parseRes.template.content)
+
+console.log('result', compilerResult.ast)
