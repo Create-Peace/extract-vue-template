@@ -7,10 +7,10 @@ const opt = {
   devtool: "inline-source-map",
   entry: "./src/index.vue",
   output: {
-    library: {
-      name: "library",
-      type: "var",
-    },
+    // library: {
+    //   name: "library",
+    //   type: "var",
+    // },
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
