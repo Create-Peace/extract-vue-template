@@ -6,7 +6,11 @@ const opt = {
   mode: "development",
   devtool: "inline-source-map",
   entry: "./src/index.vue",
+  experiments: {
+    outputModule: true,
+  },
   output: {
+    libraryTarget: 'module',
     // library: {
     //   name: "library",
     //   type: "var",
