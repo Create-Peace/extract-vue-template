@@ -11,3 +11,5 @@ console.log(parseRes)
 const compilerResult = compiler.compile(parseRes.template.content)
 
 console.log('result', compilerResult.ast)
+
+fs.write('./dist/template.js', compilerResult.ast)
