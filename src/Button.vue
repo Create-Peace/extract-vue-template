@@ -1,10 +1,15 @@
-<template>
-  <div class="button">
-    <button>name</button>
-  </div>
-</template>
 <script>
 export default {
-  name: 'Button'
+  name: 'Button',
+  methods: {
+    renderChildren () {
+      return <span>button</span>
+    }
+  },
+  render (h) {
+    return (<div>
+      <button>{this.renderChildren()}</button>
+    </div>)
+  }
 }
 </script>

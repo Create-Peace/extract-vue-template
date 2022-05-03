@@ -19,7 +19,16 @@ const opt = {
     path: path.resolve(__dirname, "dist"),
   },
   module: {
-    rules: [{ test: /\.vue$/, use: "vue-loader" }],
+    rules: [
+      { test: /\.vue$/, use: "vue-loader" },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ],
   },
   plugins: [
     // make sure to include the plugin for the magic
