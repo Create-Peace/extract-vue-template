@@ -8,6 +8,7 @@
 3. slot的原理？
 4. Vue.extend和Vue.component是如何工作的？
 5. diff算法和虚拟Dom的逻辑？
+6. 使用对象字面量传值会有什么影响？
 
 
 ### 学习编译工具的原理

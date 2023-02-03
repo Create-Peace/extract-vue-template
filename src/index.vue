@@ -1,7 +1,7 @@
 <template>
     <div>
         <button @click="handleClick">{{ name }}</button>
-        <Button />
+        <Button v-bind="{name: 'test'}" />
     </div>
 </template>
 <script>

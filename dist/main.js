@@ -170,7 +170,7 @@ var render = function() {
         _vm._v(_vm._s(_vm.name))
       ]),
       _vm._v(" "),
-      _c("Button")
+      _c("Button", _vm._b({}, "Button", { name: "test" }, false))
     ],
     1
   )
