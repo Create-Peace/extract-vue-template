@@ -4,17 +4,18 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 const opt = {
   mode: "development",
-  devtool: "inline-source-map",
+  devtool: false,
   entry: "./src/index.vue",
   experiments: {
     outputModule: true,
   },
   output: {
-    libraryTarget: 'module',
-    // library: {
-    //   name: "library",
-    //   type: "var",
-    // },
+    // libraryTarget: 'var',
+    // libraryTarget: 'var',
+    library: {
+      name: "library",
+      type: "window",
+    },
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },

@@ -19,11 +19,6 @@ const obj = {
     methods: {
         handleClick () {
             console.log('button click')
-        },
-        globalRender () {
-            return {
-                children: <Button></Button>
-            }
         }
 
     }
